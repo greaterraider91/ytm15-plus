@@ -17,3 +17,45 @@ html {
         transition: background .3s;
 }
 
+html::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 1.3px solid rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    pointer-events: none;
+}
+
+html.no-app-border::before {
+    display: none;
+}
+
+ytm15app {
+display: block;
+transition: margin .2s, padding .2s;
+}
+
+.has-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.item-section {
+    border-bottom: 1.2px solid rgba(0,0,0,0.2);
+}
+
+[hidden][hidden] {
+    display: none;
+}
+
+.text-selection *:not(input):not(select):not(code):not(textarea):not([contenteditable]) {
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
