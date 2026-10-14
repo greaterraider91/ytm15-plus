@@ -59,3 +59,37 @@ transition: margin .2s, padding .2s;
 	-ms-user-select: none;
 	user-select: none;
 }
+none;
+}
+
+/* Tab content */
+.tabs-content-container {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-snap-type: both mandatory;
+    overscroll-behavior-x: contain;
+    animation: set-overflow-none .28s;
+    min-height: calc(100vh - 52px);
+}
+.tabs-content-container::-webkit-scrollbar {
+    display: none;
+}
+@keyframes set-overflow-none {
+0% {
+    overflow: unset;
+}
+100% {
+    overflow: unset;
+}
+}
+.tab-content {
+    width: 100%;
+    scroll-snap-stop: normal;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    transition: transform .25s;
+}
+.tab-content:empty {
+    display: none;
+}
