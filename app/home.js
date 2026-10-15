@@ -1,17 +1,17 @@
 var spinnerParent = document.querySelector("#app");
 spinner();
 
-/* async function fetchData() {
+async function fetchData() {
     try {
-        const response = await fetch('https://invidious.protokolla.fi/api/v1/popular');
+        const response = await fetch('https://noembed.com/embed?callback=%3Cesi%3Ainclude%20src%3D%22%2Fesi%2Fjsonp-callback%22%2F%3E&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D19QVaqbuaEc');
         const data = await response.json();
         return data;
     } catch (error) {
         console.error('Error fetching data:', error);
     }
-} */
+}
 
-/* async function fetchDataTrending() {
+async function fetchDataTrending() {
     try {
         // if (urlpage !== "trending")
         if (window.location.hash.split("/").join(',').split("?").join(',').split(',').slice(1, 2)[0] !== "trending") {
